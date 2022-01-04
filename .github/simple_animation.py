@@ -1,4 +1,4 @@
-# Simple Animation with PyGame, Tyler Fann, 1/4/22, 1:03 PM, v0.7
+# Simple Animation with PyGame, Tyler Fann, 1/4/22, 1:12 PM, v0.8
 
 from _typeshed import ReadableBuffer
 import pygame, sys, time
@@ -81,6 +81,8 @@ while True:
               if b['dir'] == DOWNRIGHT:
                   b['dir'] = DOWNLEFT 
               if b['dir'] == UPRIGHT:
-                  b['dir'] = UPLEFT                    
-
-
+                  b['dir'] = UPLEFT        
+                              
+        # Draw the box onto the game surface.
+        pygame.display.update()
+        time.sleep(0.02)
