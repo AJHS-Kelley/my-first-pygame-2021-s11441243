@@ -58,7 +58,7 @@ while True:
             b['rect'].left += MOVESPEED
             b['rect'].top -= MOVESPEED
 
-       if b['rect'].top < 0:
+        if b['rect'].top < 0:
            # The box has moved past the top.
            if b['dir'] == UPLEFT:
                b['dir'] = DOWNLEFT

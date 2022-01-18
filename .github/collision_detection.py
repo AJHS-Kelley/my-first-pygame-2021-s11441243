@@ -1,7 +1,7 @@
 # PyGame Collision Detection Practice, Tyler Fann, January 18, 2022, 1:01Pm, v1.1
 
-import pygame, sys, random
-from pygame.locals import *
+    import pygame, sys, random
+    from pyGame.locals import *
 
 # Setup PyGame
 pygame.init()
@@ -43,7 +43,7 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-       if event.type == KEYDOWN:
+        if event.type == KEYDOWN:
            # Change the keyboard variables.
            if event.key == K_LEFT or event.key == K_a:
                moveRight = False
@@ -57,7 +57,7 @@ while True:
            if event.key == K_DOWN or event.key == K_s:
                moveUp = False
                moveDown = True        
-       if event.type == KEYUP:
+        if event.type == KEYUP:
            if event.key == K_ESCAPE:
                pygame.quit()
                sys.exit()
@@ -77,8 +77,8 @@ while True:
         if event.type == MOUSEBUTTONUP:
             foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE)  
 
-   foodCounter += 1
-   if foodCounter >= NEWFOOD:
+    foodCounter += 1
+    if foodCounter >= NEWFOOD:
        # Add new food.
        foodCounter = 0
        foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
