@@ -1,4 +1,4 @@
-# PyGame Collision Detection Practice, Tyler Fann, January 18, 2022, 11:43Am, v0.7
+# PyGame Collision Detection Practice, Tyler Fann, January 18, 2022, 11:50Am, v0.8
 
 import pygame, sys, random
 from pygame.locals import *
@@ -72,4 +72,7 @@ while True:
                moveDown = False
            if event.key == K_x: # Use x to teleport the player. 
                player.top = random.randint(0, WINDOWHEIGHT - player.height)
-               player.left = random.randint(0, WINDOWWIDTH - player.width)                    
+               player.left = random.randint(0, WINDOWWIDTH - player.width)   
+
+        if event.type == MOUSEBUTTONUP:
+            foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE)  
