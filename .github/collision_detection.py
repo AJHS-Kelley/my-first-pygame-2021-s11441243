@@ -3,7 +3,7 @@
 from curses import A_ATTRIBUTES, A_DIM, A_LEFT, A_RIGHT, A_STANDOUT, KEY_DOWN, KEY_UP
 from socket import AF_WANPIPE
 import pygame, sys, random
-from pyGame.locals import *
+from pygame.locals import *
 
 # Setup PyGame
 pygame.init()
