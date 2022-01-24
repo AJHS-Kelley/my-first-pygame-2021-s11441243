@@ -1,7 +1,9 @@
 # PyGame Collision Detection Practice, Tyler Fann, January 18, 2022, 1:01Pm, v1.1
 
-    import pygame, sys, random
-    from pyGame.locals import *
+from curses import A_ATTRIBUTES, A_DIM, A_LEFT, A_RIGHT, A_STANDOUT, KEY_DOWN, KEY_UP
+from socket import AF_WANPIPE
+import pygame, sys, random
+from pyGame.locals import *
 
 # Setup PyGame
 pygame.init()
@@ -40,26 +42,26 @@ MOVESPEED = 6
 while True:
     # Check for events.
     for event in pygame.event.get():
-        if event.type == QUIT:
+        if event.type == quit:
             pygame.quit()
             sys.exit()
-        if event.type == KEYDOWN:
+        if event.type == KEY_DOWN:
            # Change the keyboard variables.
-           if event.key == K_LEFT or event.key == K_a:
+           if event.key == A_LEFT or event.key == A_ATTRIBUTES:
                moveRight = False
                moveLeft = True
-           if event.key == K_RIGHT or event.key == K_d:
+           if event.key == A_RIGHT or event.key == A_DIM:
                moveLeft = False
                moveRight = True    
-           if event.key == K_UP or event.key == K_w:
+           if event.key == KEY_UP or event.key == AF_WANPIPE:
                moveDown = False
                moveUp = True
-           if event.key == K_DOWN or event.key == K_s:
+           if event.key == KEY_UP or event.key == A_STANDOUT:
                moveUp = False
                moveDown = True        
-        if event.type == KEYUP:
-           if event.key == K_ESCAPE:
-               pygame.quit()
+               if event.type == KEY_DOWN:
+                if event.key == K_ESCAPE:
+                 pygame.quit()
                sys.exit()
            # Check to see if the player has stopped moving.
            if event.key == K_LEFT or event.key == K_a:

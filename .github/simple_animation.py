@@ -36,7 +36,7 @@ boxes = [b1, b2, b3]
 while True:
     # Check for QUIT event.
     for event in pygame.event.get():
-        if event.type == QUIT:
+        if event.type == quit:
             pygame.quit()
             sys.exit()
 
