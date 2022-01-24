@@ -1,6 +1,5 @@
 # Simple Animation with PyGame, Tyler Fann, 1/4/22, 1:12 PM, v0.8
 
-from _typeshed import ReadableBuffer
 import pygame, sys, time
 from pygame.locals import *
 
