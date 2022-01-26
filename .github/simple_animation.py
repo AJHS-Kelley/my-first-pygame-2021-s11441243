@@ -59,28 +59,28 @@ while True:
 
         if b['rect'].top < 0:
            # The box has moved past the top.
-           if b['dir'] == UPLEFT:
-               b['dir'] = DOWNLEFT
-           if b['dir'] == UPRIGHT:
-               b['dir'] = DOWNRIGHT
-           if b['rect'].bottom > WINDOWHEIGHT:
+            if b['dir'] == UPLEFT: 
+                b['dir'] = DOWNLEFT  
+           if b['dir'] == UPRIGHT: # Line up with 62.
+               b['dir'] = DOWNRIGHT # Line up with 63.
+           if b['rect'].bottom > WINDOWHEIGHT: # Line up with 62.
                # The box has moved past the bottom.
-               if b['dir'] == DOWNLEFT:
-                   b['dir'] = UPLEFT
-               if b['dir'] == DOWNRIGHT:
-                   b['dir'] = UPRIGHT
-           if b['rect'].left < 0:
+               if b['dir'] == DOWNLEFT: # Line up with 62.
+                   b['dir'] = UPLEFT # Line up with 63.
+               if b['dir'] == DOWNRIGHT: # Line up with 62.
+                   b['dir'] = UPRIGHT # Line up with 63.
+           if b['rect'].left < 0: # Line up with 62.
                # The box has moved past the left.
-               if b['dir'] == DOWNLEFT:
-                   b['dir'] = DOWNRIGHT
-               if b['dir'] == UPLEFT:
-                   b['dir'] = UPRIGHT
-           if b['rect'].right > WINDOWWIDTH:
+               if b['dir'] == DOWNLEFT:# Line up with 62.
+                   b['dir'] = DOWNRIGHT # Line up with 63.
+               if b['dir'] == UPLEFT:# Line up with 62.
+                   b['dir'] = UPRIGHT # Line up with 63.
+           if b['rect'].right > WINDOWWIDTH: # Line up with 62.
               # The box has moved past the right.
-              if b['dir'] == DOWNRIGHT:
-                  b['dir'] = DOWNLEFT 
-              if b['dir'] == UPRIGHT:
-                  b['dir'] = UPLEFT        
+              if b['dir'] == DOWNRIGHT:# Line up with 62.
+                  b['dir'] = DOWNLEFT # Line up with 63.
+              if b['dir'] == UPRIGHT:# Line up with 62.
+                  b['dir'] = UPLEFT # Line up with 63.       
                               
         # Draw the box onto the game surface.
         pygame.draw.rect(windowSurface, b['color'], b['rect'])
