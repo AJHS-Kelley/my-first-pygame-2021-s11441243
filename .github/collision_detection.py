@@ -1,7 +1,5 @@
 # PyGame Collision Detection Practice, Tyler Fann, January 18, 2022, 1:01Pm, v1.1
 
-from curses import A_ATTRIBUTES, A_DIM, A_LEFT, A_RIGHT, A_STANDOUT, KEY_DOWN, KEY_UP
-from socket import AF_WANPIPE
 import pygame, sys, random
 from pygame.locals import *
 
@@ -24,11 +22,11 @@ WHITE = (255, 255, 255)
 foodCounter = 0
 NEWFOOD = 40 
 FOODSIZE = 20
-player = pygame.rect(300, 100, 50, 50)
+player = pygame.Rect(300, 100, 50, 50)
 foods = []
 
 for i in range(20):
-    foods.append(pygame.rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
+    foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
 
 # Movement Variables
 moveLeft = False
@@ -45,7 +43,7 @@ while True:
         if event.type == quit:
             pygame.quit()
             sys.exit()
-        if event.type == KEY_DOWN:
+        if event.type == KEYDOWN:
            # Change the keyboard variables.
            if event.key == A_LEFT or event.key == A_ATTRIBUTES:
                moveRight = False
@@ -59,7 +57,7 @@ while True:
            if event.key == KEY_UP or event.key == A_STANDOUT:
                moveUp = False
                moveDown = True        
-               if event.type == KEY_DOWN:
+               if event.type == KEYDOWN:
                 if event.key == K_ESCAPE:
                  pygame.quit()
                sys.exit()
