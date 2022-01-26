@@ -82,7 +82,8 @@ while True:
               if b['dir'] == UPRIGHT:
                   b['dir'] = UPLEFT        
                               
-            # Review the Simple Animation v0.8 video, you are missing code here. 
+        # Draw the box onto the game surface.
+        pygame.draw.rect(windowSurface, b['color'], b['rect'])
         
         # Draw the box onto the game surface.
     pygame.display.update()
